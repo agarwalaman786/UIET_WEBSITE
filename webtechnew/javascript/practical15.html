@@ -1,0 +1,76 @@
+<html>
+<head>
+<script Language ="Javascript" >
+
+function validatemail(){
+var x = form1.email.value;
+var first = x.indexOf("@");  
+var second = x.lastIndexOf(".");  
+if(x == null || x == "")
+{
+alert("Email is not valid");
+return false;
+}
+else if(first==-1 || second==-1){
+alert("Wrong email");
+return false;
+}
+else if (first<1 || second<first+2 || second+1>x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+}  
+else
+{
+alert("validate");
+return true;
+}
+}
+
+function match1()
+{
+var a = form1.password1.value;
+var b = form1.password2.value;
+if (a == null || b==null)
+{
+return false;
+}
+else if (a==b)
+{
+alert("submit successfully");
+return true;
+}
+else
+{
+alert("password does not match");
+return false;
+}
+}
+</script>
+<style>
+body{
+background-image:url('aman.jpg');
+background-repeat:no-repeat;
+}
+
+</style>
+</head>
+<body>
+<div style = "background-color:white;padding-top:50px; opacity:0.7;width : 400px;height:300px; margin-left:450px;margin-top:200px;border-radius:10%;">
+<center>
+<form onsubmit = "return validatemail() && match1()" action = "#" method = "post" name = "form1">
+<label>Enter your name</label><br>
+<input type = "string" placeholder = "Enter name" name = "name"/><br>
+<br>
+<label>Enter Email</label><br>
+<input type = "" placeholder = "Enter email" name = "email"/><br>
+<br>
+<label>Enter password</label><br>
+<input type = "password" placeholder = "Enter password " name = "password1"/><br><br>
+<label>Confirm password</label><br>
+<input type = "password" placeholder = "Enter password " name = "password2"/><br><br>
+<input type = "submit" value = "submit"></input><br>
+</form>
+</center>
+</div>
+</body>
+</html>

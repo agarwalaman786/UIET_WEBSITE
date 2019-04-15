@@ -1,0 +1,60 @@
+<html>
+<head>
+<script Language ="Javascript" >
+function primenumber(form){
+var m = parseInt(form.input1.value);
+var n = parseInt(form.input2.value);
+var i;
+var sum = 0;
+var count = 0;
+if(m>n)
+{
+alert("first number should be less or equal");
+return ;
+}
+for(i=m;i<=n;i++)
+{
+if(i>1)
+{
+count =0;
+for(j=2;j<i;j++)
+{
+if(i%j==0)
+{
+count++;
+}
+}
+if(count == 0)
+{
+sum = sum +i;
+}
+}
+}
+alert("sum is " + sum);
+}
+</script>
+<style>
+body{
+background-image:url('aman.jpg');
+background-repeat:no-repeat;
+}
+
+</style>
+</head>
+<body>
+<div style = "background-color:white;padding-top:50px; opacity:0.7;width : 400px;height:300px; margin-left:450px;margin-top:200px;border-radius:10%;">
+<center>
+<form>
+<label>Enter first number</label><br>
+<input type = "number" placeholder = "Enter number" name = "input1" min = "0"/><br>
+<br>
+<label>Enter Second number</label><br>
+<input type = "number" placeholder = "Enter number" name = "input2" min = "0"/><br>
+<br>
+<label>Click on button to find sum of prime numbers</label><br>
+<button value = "find sum" type = "submit" onclick = "primenumber(form)">find sum</button><br>
+</form>
+</center>
+</div>
+</body>
+</html>

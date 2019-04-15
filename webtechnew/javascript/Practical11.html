@@ -1,0 +1,39 @@
+<html>
+<head>
+<script Language = "Javascript">
+function msg(form){ 
+var a = parseInt(form.BS.value);
+var b = parseInt(form.DA.value);
+var c = parseInt(form.TA.value);
+var TS = a + a*b/100  + c;
+confirm("Total Salary is " + TS);
+}
+</script>
+<style>
+body{
+background-image:url('index.jpeg');
+background-repeat:no-repeat;
+background-size:cover;
+}
+</style>
+</head>
+<body>
+<center>
+<h1 style = "color:white;">Total Salary Calculator</h1>
+<div style = "background-color:#e6e6e6;width:400px;height:250px;border-radius:5%;">
+<form style = "margin-top:50px;">
+<label>Basic Salary</label><br>
+<input placeholder = "Enter Salary" style = "margin-bottom:20px;width:200px;" Name = "BS" type = "number" min="0"></input>
+<br>
+<label>DA</label><br>
+<input placeholder = "Enter DA..." type = "number" style = "margin-bottom:20px;width:200px;" Name = "DA" min="10" max="100"></input>
+<br>
+<label>TA</label><br>
+<input placeholder = "Enter TA..." type = "number" style = "width:200px;" Name = "TA" min = "10"></input><br>
+<br>
+<br>
+<center><input value = "Confirm" type = "submit" min="1" onclick = "msg(form)"></input></center>
+</form>
+</center>
+</body>
+</html>
